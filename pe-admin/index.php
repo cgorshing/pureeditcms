@@ -28,7 +28,7 @@ if (!isset($_SESSION['key'][$settings['pureedit']['sessionKey']])) // If we are 
     if(isset($_GET['authenticate'])) // Have we hit submit?
     {
 		$Auth = new Auth($settings);
-        if ($Auth->direction("in"))
+        if ($Auth->direction('in'))
         {
 			header('Refresh: 1; url=index.php');	
             include_once('themes/' . APP_THEME . '/html/authredirect.tpl.php');

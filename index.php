@@ -1,7 +1,7 @@
 <?php
 //////////////////////////////////////////////////////////////
 // This page is suppose to be the root/index page of
-// your website. /pe-admin directory actually is pureedit.
+// your website. The /pe-admin directory actually is pureedit.
 // This page will be overwritten during installation to give
 // you an example of how your website is not dependent on PureEdit.
 //////////////////////////////////////////////////////////////

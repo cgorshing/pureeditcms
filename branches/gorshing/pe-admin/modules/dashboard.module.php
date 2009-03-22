@@ -6,12 +6,13 @@ if (isset($_SESSION['key'][$settings['pureedit']['sessionKey']])) // If we are n
 	$rss->cache_time = 1200;
 	
 	// Check to see if /install dir exists.
+	$installDirFound = null;
 	if (is_dir("install"))
 	{
 		$installDirFound = $Html->installDirFound($lang);
 	}
 	
-	$module_output .= $Html->heading($installDirFound);
+	$module_output = $Html->heading($installDirFound);
 
 	if ($rs = $rss->get(APP_RSS)) // Try to load and parse RSS file
 	{

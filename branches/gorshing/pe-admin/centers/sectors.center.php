@@ -2,7 +2,7 @@
 if (isset($_SESSION['key'][$settings['pureedit']['sessionKey']])) // If we are not logged in.
 {
 	require_once('themes/' . APP_THEME . '/html/sectors.tpl.php');
-	$sectors_output .= $Html->main($lang);
+	$sectors_output = $Html->main($lang);
 }
 else
 {

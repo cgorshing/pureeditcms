@@ -30,11 +30,11 @@ if (isset($_GET['topic']) && $_GET['topic'] != "none")
 		default: $helpTopicHTML = "No help topic was found.";
 	}
 	
-	$help_output .= $Html->topic($helpTopicHTML, $lang);	
+	$help_output = $Html->topic($helpTopicHTML, $lang);	
 }
 else
 {
-	$help_output .= $Html->index($lang);
+	$help_output = $Html->index($lang);
 }
 
 echo $help_output;

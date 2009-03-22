@@ -41,13 +41,14 @@ class Date
 					// Loop through type.
 					foreach($settings['date'][$typeValue] AS $key => $value)
 					{
+						$selected = '';
+
 						if($date[$typeKey] == $key)
 						{
 							$selected = 'selected="selected"';
 						}
 
 						$this->value .= '<option value="' . $key . '" ' . $selected . '>' . $value . '</option>';
-						$selected = '';
 					}
 
 					$this->value .= '</select> ';

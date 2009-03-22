@@ -27,10 +27,9 @@ $lang['auth'] = array
     "emailNotFound" => "<b>Sorry!</b><br /><br />The email you submitted was not found on file. Please <a href=\"centers/passwordReset.center.php?tryagain=true\" onclick=\"ajax_get('forgetPassword', this.href); return false;\">try again</a>",
     "emailSubject" => "Your password has been reset!",
     "emailMessage" => "Thank you for resetting your password. You may now login using this passowrd: ",        
-        
-    // Redriect
-    "redirect" => "Please wait while we log you <strong>" . $_GET['authenticate'] . "</strong>. <br /><br /><a href=\"index.php\">Or, click here to be redirected manually.</a>"
 );
+
+if ( isset($_GET['authenticate'])) $lang['auth']['redirect'] = "Please wait while we log you <strong>" . $_GET['authenticate'] . "</strong>. <br /><br /><a href=\"index.php\">Or, click here to be redirected manually.</a>";
 
 // Dashboard translations.
 $lang['dashboard'] = array

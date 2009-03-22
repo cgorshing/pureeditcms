@@ -6,7 +6,7 @@ if (isset($_POST['save'])) // Are we saving?
 }
 else // Display fields.
 {		
-	$module_output .= $Html->entryviewHeader($endUrlString = (isset($_GET['id'])) ? '&amp;id=' . $_GET['id'] : '');
+	$module_output = $Html->entryviewHeader($endUrlString = (isset($_GET['id'])) ? '&amp;id=' . $_GET['id'] : '');
 	
 	$getEntry = (isset($_GET['id'])) ? $Db->select(SECTOR_ABBREV, $_GET['id']) : $Db->select(SECTOR_ABBREV, "0");
 	$entry = $Db->fetch_row($getEntry);

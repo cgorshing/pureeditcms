@@ -107,7 +107,7 @@ TEMPLATE;
 
 	// No sector found.
 	// --------------------------------------------------
-	function sectorTableNotFound($lang, $entry, $settings, $SECTOR_ABBREV)
+	function sectorTableNotFound($lang, $settings, $SECTOR_ABBREV)
 	{
 		return <<<TEMPLATE
 		
@@ -125,7 +125,7 @@ TEMPLATE;
 					
 	// Overview footer.
 	// --------------------------------------------------
-	function footer($lang, $entry, $SECTOR_ABBREV)
+	function footer($lang, $SECTOR_ABBREV)
 	{
 		return <<<TEMPLATE
 

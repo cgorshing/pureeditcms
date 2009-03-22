@@ -7,12 +7,13 @@
 		if (dbConnections() == true)
 		{
 			// Write DB info to the settings.php file.
-			change_setting("databaseHost", $_POST['databaseHost']);
-			change_setting("databaseName", $_POST['databaseName']);
-			change_setting("databaseUsername", $_POST['databaseUsername']);
-			change_setting("databasePassword", $_POST['databasePassword']);
-			change_setting("database", $_POST['databaseType']);
-			change_setting("tablePrefix", $_POST['tablePrefix']);
+			change_setting('databaseHost', $_POST['databaseHost']);
+			change_setting('databaseName', $_POST['databaseName']);
+			change_setting('databaseUsername', $_POST['databaseUsername']);
+			change_setting('databasePassword', $_POST['databasePassword']);
+			change_setting('database', $_POST['databaseType']);
+			change_setting('tablePrefix', $_POST['tablePrefix']);
+			change_setting('databaseType', $_POST['databaseType']);
 
 			require('../library/settings.lib.php');
 			require_once('../databases/' . $_POST['databaseType'] . '.db.php');

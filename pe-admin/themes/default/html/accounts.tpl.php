@@ -120,14 +120,19 @@ TEMPLATE;
 	// Accounts footer and action buttons.
 	// --------------------------------------------------
 	function footer($lang, $account, $diableCreateButtons, $disableEditButtons)
-	{		
+	{
+		if (isset($_GET['account']))
+			$deleteValue = $_GET['account'];
+		else
+			$deleteValue = '';
+			
 		return <<<TEMPLATE
 		
 		</table>
 		<div class="action_buttons" style="margin-top: 10px;">
         	<button type="button" name="create" {$diableCreateButtons} onclick="Effect.toggle('newAccount', 'blind', {duration: .1}); removeDisabled();">{$lang['accounts']['create']}</button>
 			<button type="submit" name="save" {$disableEditButtons}>{$lang['accounts']['save']}</button>            
-            <button type="button" name="delete" {$disableEditButtons} onclick="deleteAccount('centers/accounts.center.php?delete={$_GET['account']}', '{$lang['accounts']['deleteMessage']}');">{$lang['accounts']['delete']}</button>  
+            <button type="button" name="delete" {$disableEditButtons} onclick="deleteAccount('centers/accounts.center.php?delete={$deleteValue}', '{$lang['accounts']['deleteMessage']}');">{$lang['accounts']['delete']}</button>  
             <button name="close" {$disableEditButtons} onclick="ajax_get('accounts_center', 'centers/accounts.center.php?close=true'); return false;">{$lang['accounts']['close']}</button>  
 		</div>
 		</form>				

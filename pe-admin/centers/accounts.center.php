@@ -19,7 +19,7 @@ else
 	require_once('themes/' . APP_THEME . '/html/accounts.tpl.php');
 }
 
-$accounts_output .= $Html->heading($lang);
+$accounts_output = $Html->heading($lang);
 
 // Determine the action. 
 if (isset($_GET['account'])) // Editing an account.

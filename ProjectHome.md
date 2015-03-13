@@ -1,0 +1,1 @@
+PureEdit is the first CMS that dramatically simplifies the back-end development of your website while giving you full control of the front-end design and programming. By allowing such uncommon flexibility, PureEdit empowers you to design web sites from the ground up, without forcing you to follow the narrow template rules you'll find elsewhere.
